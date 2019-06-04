@@ -11,7 +11,7 @@ export default function Header() {
     <Container>
       <Top>
         <Logo source={logo} />
-        <Title>Tiago</Title>
+        <Title>Tinim</Title>
       </Top>
       <Icon name="keyboard-arrow-down" size={20} color="#FFF"/>
     </Container>
