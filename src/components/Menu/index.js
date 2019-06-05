@@ -4,9 +4,21 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import { Container, Code, Nav, NavItem, NavText, SignoutButton, SignoutButtonText } from './styles';
 
-export default function Menu() {
+export default function Menu({ translateY }) {
   return(
-    <Container>
+    <Container style={{
+      transform: [{
+        translateY: translateY.interpolate({
+          inputRange: [0, 380],
+          outputRange: [0, 30],
+          extrapolate: 'clamp'
+        })
+      }],
+      opacity: translateY.interpolate({
+        inputRange: [0, 150],
+        outputRange: [0, 1],
+      })
+    }}>
       <Code>
         <QRCode 
           value="https://tiagohermano.github.io"
